@@ -3,16 +3,25 @@ name: golang-pipelie
 on: push
 
 jobs:
+
+  dev:
+    runs-on: ubunto-latest
+    steps:
+      - name: Run Dev
+        run: |
+          echo "Dev"
+
+
   test:
     runs-on: ubuntu-latest
     #make sure it only runs when changes are pushed to the main branch or a tag is pushed
     if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags') 
     steps:
+    needs: dev
       - uses: actions/checkout@v2
       - name: Run Unit Tests
         run: go test
 
-  dev:   
 
   deploy:
     runs-on: ubuntu-latest
