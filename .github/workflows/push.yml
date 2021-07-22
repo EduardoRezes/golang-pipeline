@@ -35,7 +35,7 @@ jobs:
         uses: docker/login-action@v1
         with:
           username: ${{eduardorezes}}
-          password: ${{Modal98431Re31.}}
+          password: ${{730e4129-c308-492a-bc59-f74133f2344e}}
 
       - name: PrepareReg Names
         id: read-docker-image-identifiers
