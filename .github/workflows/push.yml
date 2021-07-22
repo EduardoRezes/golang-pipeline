@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Run Dev
         run: |
-          echo "Dev"
+          echo ${{github.ref}}
 
 
   test:
