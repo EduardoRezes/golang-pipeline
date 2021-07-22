@@ -34,7 +34,7 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{contatoeduardorezes@gmail.com}}
+          username: ${{eduardorezes}}
           password: ${{Modal98431Re31.}}
 
       - name: PrepareReg Names
